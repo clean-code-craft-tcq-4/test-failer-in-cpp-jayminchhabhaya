@@ -1,7 +1,7 @@
 #include <iostream>
 #include <assert.h>
 
-#define AlertTest TRUE //TRUE for networkAlertTest and FALSE for networkAlertStub
+#define AlertTest 0 //0 for networkAlertTest and 1 for networkAlertStub
 
 int alertFailureCount = 0;
 int networkAlertTest(float celcius) {
@@ -23,7 +23,7 @@ int networkAlertStub(float celcius) {
 void alertInCelcius(float farenheit) {
     float celcius = (farenheit - 32) * 5 / 9;
 	int returnCode;
-	if(AlertTest == TRUE){
+	if(AlertTest){
 		returnCode = networkAlertTest(celcius);
 	}
 	else{
@@ -40,9 +40,9 @@ void alertInCelcius(float farenheit) {
 
 int main() {
     alertInCelcius(400.5);
-	ssert(alertFailureCount == 0);
+    assert(alertFailureCount == 0);
     alertInCelcius(303.6);
-	ssert(alertFailureCount == 1);
+    assert(alertFailureCount == 1);
     std::cout << alertFailureCount << " alerts failed.\n";
     std::cout << "All is well (maybe!)\n";
     return 0;
