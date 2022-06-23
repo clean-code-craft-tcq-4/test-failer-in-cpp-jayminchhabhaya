@@ -1,2 +1,5 @@
 #include <iostream>
-int networkAlertTest(float celcius);
+namespace AlertTest
+{
+	int networkAlertTest(float celcius);
+}

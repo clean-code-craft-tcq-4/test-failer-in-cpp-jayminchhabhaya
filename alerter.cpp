@@ -3,6 +3,9 @@
 #include"alertertest.hpp"
 #include"alerterstub.hpp"
 
+using namespace AlertStub;
+using namespace AlertTest;
+
 int alertFailureCount = 0;
 
 void alertInCelcius(float farenheit,int (*funcptr)(float)) {

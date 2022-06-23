@@ -1,2 +1,5 @@
 #include <iostream>
-int networkAlertStub(float celcius);
+namespace AlertStub
+{
+	int networkAlertStub(float celcius);
+}
