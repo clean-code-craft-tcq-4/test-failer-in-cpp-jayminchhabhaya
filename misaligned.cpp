@@ -21,12 +21,12 @@ void fillcolorInfoobject(int pairNumber,const char* majorColor,const char* minor
     colorInfoobject2.MajorColor.push_back(majorColor);
     colorInfoobject2.MinorColor.push_back(minorColor);
 }
-int printColorMap() {
+int colorInfo::printColorMap() {
     int i = 0, j = 0;
-    for(i = 0; i < 5; i++) {
-        for(j = 0; j < 5; j++) {
-            std::cout << i * 5 + j << " | " << MajorColorNames[i] << " | " << MinorColorNames[i] << "\n";
-			fillcolorInfoobject((i * 5 + j),MajorColorNames[i],MinorColorNames[i]);
+    for(i = 0; i < numberOfMajor; i++) {
+        for(j = 0; j < numberOfMinor; j++) {
+            std::cout << i * numberOfMinor + j << " | " << MajorColorNames[i] << " | " << MinorColorNames[i] << "\n";
+			fillcolorInfoobject((i * numberOfMinor + j),MajorColorNames[i],MinorColorNames[i]);
         }
     }
     return i * j;
@@ -41,7 +41,7 @@ void testassert(const colorInfo &obj1,const colorInfo &obj2){
 int main() {
     colorInfo colorInfoobject1;
 	colorInfoobject1.GetColorCodeManualRef();
-    int result = printColorMap();
+    int result = colorInfoobject1.printColorMap();
     assert(result == 25);
 	testassert(colorInfoobject1,colorInfoobject2);
     std::cout << "All is well (maybe!)\n";
