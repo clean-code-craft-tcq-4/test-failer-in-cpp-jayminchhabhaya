@@ -5,7 +5,7 @@
 
 int alertFailureCount = 0;
 
-void alertInCelcius(float farenheit,void (*funcptr)(float)) {
+void alertInCelcius(float farenheit,int (*funcptr)(float)) {
     float celcius = (farenheit - 32) * 5 / 9;
 	int returnCode = funcptr(celcius);
     if (returnCode != 200) {
