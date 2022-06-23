@@ -1,7 +1,7 @@
 #include <iostream>
 #include <assert.h>
-#include"alertertest.hpp"
-#include"alerterstub.hpp"
+#include"alertertest.cpp"
+#include"alerterstub.cpp"
 
 using namespace AlertStub;
 using namespace AlertTest;

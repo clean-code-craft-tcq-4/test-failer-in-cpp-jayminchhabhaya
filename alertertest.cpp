@@ -1,5 +1,4 @@
 #include <iostream>
-#include"alertertest.hpp"
 namespace AlertTest
 {
 	int networkAlertTest(float celcius) {

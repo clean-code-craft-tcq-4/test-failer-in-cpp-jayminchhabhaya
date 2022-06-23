@@ -1,5 +1,4 @@
 #include <iostream>
-#include"alerterstub.hpp"
 namespace AlertStub
 {
 	int networkAlertStub(float celcius) {
