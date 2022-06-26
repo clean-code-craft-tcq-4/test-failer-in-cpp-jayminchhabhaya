@@ -7,9 +7,13 @@ using namespace AlertStub;
 using namespace AlertTest;
 
 int alertFailureCount = 0;
-
+flost farenheitTocelcius(float farenheit)
+{
+ float celcius = (farenheit - 32) * 5 / 9;
+ return celcius;
+}
 void alertInCelcius(float farenheit,int (*funcptr)(float)) {
-    float celcius = (farenheit - 32) * 5 / 9;
+    float celcius = farenheitTocelcius(farenheit);
 	int returnCode = funcptr(celcius);
     if (returnCode != 200) {
         // non-ok response is not an error! Issues happen in life!
