@@ -7,7 +7,7 @@ using namespace AlertStub;
 using namespace AlertTest;
 
 int alertFailureCount = 0;
-flost farenheitTocelcius(float farenheit)
+float farenheitTocelcius(float farenheit)
 {
  float celcius = (farenheit - 32) * 5 / 9;
  return celcius;
